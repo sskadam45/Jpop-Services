@@ -1,5 +1,7 @@
 package com.jpop.userservice.service;
 
+import com.jpop.userservice.model.Book;
+import com.jpop.userservice.model.BookProxy;
 import com.jpop.userservice.model.User;
 import com.jpop.userservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,9 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private BookProxy bookProxy;
 
     public List<User> findAll() {
         return userRepository.findAll();
@@ -30,4 +35,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    public List<Book> getUserWithBooks() {
+        return bookProxy.findAll();
+    }
 }
