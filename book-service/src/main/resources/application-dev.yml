@@ -1,0 +1,3 @@
+health:
+  check:
+    message: book service is up now-DEV local!!!
