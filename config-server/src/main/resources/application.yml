@@ -1,0 +1,26 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sskadam45/cloud-config-server
+          #uri: file:///D:/sk2/Jpop/config-repo
+
+
+    bus:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
