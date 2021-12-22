@@ -7,7 +7,7 @@ import java.util.List;
 
 @FeignClient(name="BOOK-SERVICE" )
 public interface BookProxy {
-    @RequestMapping("/books")
+    @RequestMapping("/book/v1.1")
     public List<Book> findAll();
 }
 
