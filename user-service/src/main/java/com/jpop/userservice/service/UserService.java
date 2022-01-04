@@ -4,9 +4,11 @@ import com.jpop.userservice.model.Book;
 import com.jpop.userservice.model.BookProxy;
 import com.jpop.userservice.model.User;
 import com.jpop.userservice.repository.UserRepository;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,4 +40,5 @@ public class UserService {
     public List<Book> getUserWithBooks() {
         return bookProxy.findAll();
     }
+
 }

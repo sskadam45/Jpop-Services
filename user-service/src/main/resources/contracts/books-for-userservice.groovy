@@ -4,7 +4,7 @@ Contract.make {
 
     description("should return books list")
     request {
-        url("/book/v1.1")
+        url("/user/v1.1/usersWithBooks")
         method GET()
     }
     response {
@@ -13,7 +13,6 @@ Contract.make {
             contentType applicationJson()
         }
         body '''\
-
                         [{
                             "id": 28,
                             "title": "mr",

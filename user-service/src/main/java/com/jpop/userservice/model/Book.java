@@ -46,7 +46,7 @@ public class Book {
         this.author = author;
     }
 
-    public String getCategory() {
+    public String getCategory(String default_category) {
         return category;
     }
 
@@ -54,7 +54,7 @@ public class Book {
         this.category = category;
     }
 
-    public String getDescription() {
+    public String getDescription(String default_discription) {
         return description;
     }
 

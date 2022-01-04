@@ -17,3 +17,17 @@ rabbitmq:
   port: 5672
   username: guest
   password: guest
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+
+        include: hystrix.stream, info, health
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
